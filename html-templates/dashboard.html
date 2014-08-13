@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html style="cursor: auto ! important;" lang="en"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+        <title>Słoiki — Dashboard</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+        <!-- Custom styles for this template -->
+        <link href="css/dashboard.css" rel="stylesheet">
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Słoiki</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Ustawienia</a></li>
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#">Pomoc</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input class="form-control" placeholder="Szukaj..." type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">Lodówka</a></li>
+                        <li><a href="#">Kalorie</a></li>
+                        <li><a href="#">Żywienie</a></li>
+                        <li><a href="#">Wyjazdy</a></li>
+                        <li><a href="#">Socjal</a></li>
+                        <li><a href="#">Admin</a></li>
+                    </ul>
+                    <!--
+                    Lodówka	
+                    CRUD
+                    Przeglądanie zawartości
+                    Przeglądanie zawartości wg kategorii
+                    Pokaż zaagregowaną zawartość lodówki wg kategorii
+                    Dodawanie produktów po kodzie paskowym
+                    Porcjowanie produktów
+                    Ocena produktów po zjedzeniu
+                    Czyszczenie lodówki (usuniecie wszystkiego)
+                    Wyswietlenie rankingu
+                    Kalendarz zapotrzebowania kalorii	
+                    CRUD
+                    Kalendarz żywienia	
+                    Wyświeltelnie menu na każdy dzień
+                    Automatyczne wyliczenie menu na każdy dzień
+                    Ręczne (CRUD) menu na każdy dzień
+                    Kalendarz wyjazdów po zaopatrzenie	
+                    Pokaż kiedy wyjechać
+                    Autmatyczne wylicznie wyjazdów (algorytm może uwzględniać inne kalendarze oraz dane na temat obciążenia dróg wyjazdowych)
+                    Automatyczne zamówienie mailem
+                    Pokaż co zabrać z domu (wyliczane na podstawie najczęśćiej konsumowanych rzeczy, najczęściej zamawianych, ulubionych kategorii produktów) uwzględniając pojemność bagarznika i wielkośc (gabaryty) produktów)
+                    Funkcje społecznościowe	
+                    Dodaj/usuń lodówkę przyjaciela
+                    Lista zaprzyjaźnionych lodówek
+                    Propozycja wymiany produktu
+                    Akceptacja / odrzucenie propozycji wymiany
+                    Inne	
+                    Logowanie, Wylogowanie, Zakładanie konta
+                    Raport/Predykcja obiążenia dróg wylotowych z poszczególnych miast [Admin]
+                    Zarządzanie użytkownikami [Admin]
+                    Parametryzacja diety	
+                    CRUD (dla ustawienia procentowej zawartości każdej kategorii produktów w diecie)
+                    Proponowani zwiększenia konsumpcji przedmiotów z danej kategorii
+                    -->
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <h1 class="page-header">Lodówka</h1>
+
+                    <h2 class="sub-header">Zawartość</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Kubatura</th>
+                                    <th>Data ważnosći</th>
+                                    <th>Nazwa</th>
+                                    <th>Wartość energrtyczna</th>
+                                    <th>Producent</th>
+                                    <th>Kategoria</th>
+                                    <th>Akcje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="form-control" placeholder="Kubatura" required="" autofocus="" type="text"></td>
+                                    <td><input class="form-control" placeholder="Data ważnosći" required="" autofocus="" type="text"></td>
+                                    <td><input class="form-control" placeholder="Nazwa" required="" autofocus="" type="text"></td>
+                                    <td><input class="form-control" placeholder="Wartość energrtyczna" required="" autofocus="" type="text"></td>
+                                    <td><input class="form-control" placeholder="Producent" required="" autofocus="" type="text"></td>
+                                    <td><input class="form-control" placeholder="Kategoria" required="" autofocus="" type="text"></td>
+                                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>250 g</td>
+                                    <td>2014-08-03</td>
+                                    <td>Serek wiejski</td>
+                                    <td>150kcal</td>
+                                    <td>Pilos</td>
+                                    <td>Nabiał</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>250 g</td>
+                                    <td>2014-08-12</td>
+                                    <td>Ciasto francuskie</td>
+                                    <td>143kcal</td>
+                                    <td>Filos</td>
+                                    <td>Tektura</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9 lirów</td>
+                                    <td>2014-08-21</td>
+                                    <td>Woda niegaz.</td>
+                                    <td>523kcal</td>
+                                    <td>Nestle</td>
+                                    <td>Napoje</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2 litry</td>
+                                    <td>2014-08-30</td>
+                                    <td>Sok jabłkowy</td>
+                                    <td>453kcal</td>
+                                    <td>Tarczyn</td>
+                                    <td>Napoje</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>100 g</td>
+                                    <td>2014-09-08</td>
+                                    <td>Koncentrat pomidorowy</td>
+                                    <td>344kcal</td>
+                                    <td>Lidl</td>
+                                    <td>Przetwory</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6 sztuk</td>
+                                    <td>2014-09-17</td>
+                                    <td>Parówki</td>
+                                    <td>234kcal</td>
+                                    <td>Łuków</td>
+                                    <td>Tektura</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1 litr</td>
+                                    <td>2014-09-26</td>
+                                    <td>Jogurt</td>
+                                    <td>345kcal</td>
+                                    <td>Pilos</td>
+                                    <td>Nabiał</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0.5 kg</td>
+                                    <td>2014-10-05</td>
+                                    <td>Płatki śniadaniowe</td>
+                                    <td>321kcal</td>
+                                    <td>Lidl</td>
+                                    <td>Śniadanie</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>250 g</td>
+                                    <td>2014-10-14</td>
+                                    <td>Chipsy jabłkowe</td>
+                                    <td>452kcal</td>
+                                    <td>Biedronka</td>
+                                    <td>Tektura</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1 litr</td>
+                                    <td>2014-10-23</td>
+                                    <td>Sok jabłkowy</td>
+                                    <td>211kcal</td>
+                                    <td>Tymbark</td>
+                                    <td>Napoje</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-th"></span> Zawartość</button>
+                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span> Wg kategorii</button>
+                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt"></span> Agregacja</button>
+                            <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Wyczyść lodówkę</button>
+                        </div>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-barcode"></span> Dodaj produkt</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-download-alt"></span> Porcjuj</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Ocena produktów</button>
+                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-signal"></span> Ranking</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/bootstrap.min.js"></script>
+
+</body></html>
